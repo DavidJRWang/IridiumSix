@@ -1,3 +1,38 @@
 <resources>
     <string name="app_name">UnitConverter</string>
+    <string-array name="distance_units">
+        <item>kilometer</item>
+        <item>meter</item>
+        <item>centimeter</item>
+        <item>millimeter</item>
+
+        <item>miles</item>
+        <item>yards</item>
+        <item>feet</item>
+        <item>inches</item>
+    </string-array>
+    <string-array name="mass_units">
+        <item>kilogram</item>
+        <item>gram</item>
+        <item>milligram</item>
+
+        <item>pounds</item>
+        <item>ounces</item>
+    </string-array>
+    <string-array name="temperature_units">
+        <item>celsius</item>
+        <item>fahrenheit</item>
+        <item>kelvin</item>
+    </string-array>
+    <string-array name="volume_units">
+        <item>liter</item>
+        <item>milliliter</item>
+
+        <item>gallons</item>
+        <item>cups</item>
+        <item>quarts</item>
+        <item>fluid ounces</item>
+        <item>tablespoons</item>
+        <item>teaspoons</item>
+    </string-array>
 </resources>
