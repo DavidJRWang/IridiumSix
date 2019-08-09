@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
+    private String mTopUnit;
+    private String mBottomUnit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
                 // An item was selected. You can retrieve the selected item using
                 // parent.getItemAtPosition(pos)
+                mTopUnit = parent.getItemAtPosition(pos).toString();
             }
 
             public void onNothingSelected(AdapterView<?> parent) {
@@ -39,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
                 // An item was selected. You can retrieve the selected item using
                 // parent.getItemAtPosition(pos)
+                mBottomUnit = parent.getItemAtPosition(pos).toString();
             }
 
             public void onNothingSelected(AdapterView<?> parent) {
