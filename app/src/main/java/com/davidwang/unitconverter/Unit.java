@@ -7,4 +7,8 @@ public class Unit {
     public Unit() {
         mAmount = 0;
     }
+
+    public void setFrom(String input) {
+        mFrom = input;
+    }
 }
