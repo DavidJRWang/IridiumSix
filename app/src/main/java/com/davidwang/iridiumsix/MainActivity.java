@@ -1,4 +1,4 @@
-package com.davidwang.unitconverter;
+package com.davidwang.iridiumsix;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.davidwang.unitconverter;
+package com.davidwang.iridiumsix;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.davidwang.unitconverter", appContext.getPackageName());
+        assertEquals("com.davidwang.iridiumsix", appContext.getPackageName());
     }
 }

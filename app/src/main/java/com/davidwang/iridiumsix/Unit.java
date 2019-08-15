@@ -1,4 +1,4 @@
-package com.davidwang.unitconverter;
+package com.davidwang.iridiumsix;
 
 public class Unit {
     private int mAmount;

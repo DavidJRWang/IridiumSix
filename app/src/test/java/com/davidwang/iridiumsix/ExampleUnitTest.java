@@ -1,4 +1,4 @@
-package com.davidwang.unitconverter;
+package com.davidwang.iridiumsix;
 
 import org.junit.Test;
 
