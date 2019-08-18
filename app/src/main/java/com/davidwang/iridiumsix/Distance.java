@@ -1,9 +1,5 @@
 package com.davidwang.iridiumsix;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Map;
-import java.util.Set;
 import java.util.TreeMap;
 
 public class Distance extends Unit{
@@ -24,26 +20,26 @@ public class Distance extends Unit{
         myMap = new TreeMap<>();
         myMap.put("metre", 1.0);
         myMap.put("kilometre", 1000.0);
-        myMap.put("centimetre", 1.0);
-        myMap.put("millimetre", 1.0);
+        myMap.put("centimetre", 0.1);
+        myMap.put("millimetre", 0.01);
 
-        myMap.put("mile", 1.0);
-        myMap.put("yard", 1.0);
-        myMap.put("foot", 1.0);
-        myMap.put("inch", 1.0);
+        myMap.put("mile", 0.000621371);
+        myMap.put("yard", 1.09361296);
+        myMap.put("foot", 3.2808388799999997);
+        myMap.put("inch", 39.370066559999997935);
     }
 
     public Distance() {
         super();
-        setFrom("metre");
+        setType("metre");
     }
 
-    public Distance(String fromInput) {
+    public Distance(String input) {
         this();
-        setFrom(fromInput);
+        setType(input);
     }
 
-    public int convert(String convertTo) {
+    public int convert(String input) {
         return 0;
     }
 }

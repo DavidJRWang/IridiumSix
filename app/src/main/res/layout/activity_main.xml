@@ -16,6 +16,7 @@
 
     <EditText
         android:id="@+id/top_text"
+        android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal|center_vertical"
@@ -30,6 +31,7 @@
 
     <EditText
         android:id="@+id/bottom_text"
+        android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal|center_vertical"
