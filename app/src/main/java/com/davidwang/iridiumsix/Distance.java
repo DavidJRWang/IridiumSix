@@ -39,7 +39,10 @@ public class Distance extends Unit{
         setType(input);
     }
 
-    public int convert(String input) {
-        return 0;
+    public double convert(String inputTo, double amount) {
+        // divide by 'from' (aka type) to convert into 1.0 unit, then multiply by 'to' unit
+        // amount / map[type] * map[to];
+
+        return amount / myMap.get(getType()) * myMap.get(inputTo);
     }
 }

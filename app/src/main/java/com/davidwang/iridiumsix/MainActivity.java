@@ -67,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 // we will use this
                 // grab new value, save as amount
+
+                //call convert() from here
             }
 
             @Override
