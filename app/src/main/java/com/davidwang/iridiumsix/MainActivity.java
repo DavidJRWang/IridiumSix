@@ -16,16 +16,21 @@ public class MainActivity extends AppCompatActivity {
     private String mBottomUnit;
     private double mBottomAmount;
 
+    private Spinner topSpinner;
+    private Spinner bottomSpinner;
+    private EditText topText;
+    private EditText bottomText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         // Attach spinner views to member variables
-        Spinner topSpinner = (Spinner) findViewById(R.id.top_spinner);
-        Spinner bottomSpinner = (Spinner) findViewById(R.id.bottom_spinner);
-        EditText topText = (EditText) findViewById(R.id.top_text);
-        EditText bottomText = (EditText) findViewById(R.id.bottom_text);
+        topSpinner = (Spinner) findViewById(R.id.top_spinner);
+        bottomSpinner = (Spinner) findViewById(R.id.bottom_spinner);
+        topText = (EditText) findViewById(R.id.top_text);
+        bottomText = (EditText) findViewById(R.id.bottom_text);
 
         // Create and set adapters for spinners
         // The same one can be used as you compare distance units to distance units, etc.
@@ -59,16 +64,16 @@ public class MainActivity extends AppCompatActivity {
 
         topText.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                // leave empty
-            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // we will use this
-                // grab new value, save as amount
+                // grab new value, save as 'amount'
+                String text = topText.getText().toString();
+                double finalValue = Double.parseDouble(text);
 
                 //call convert() from here
+
             }
 
             @Override
@@ -78,9 +83,7 @@ public class MainActivity extends AppCompatActivity {
         });
         bottomText.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                // leave empty
-            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {

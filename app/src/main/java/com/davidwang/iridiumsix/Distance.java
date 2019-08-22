@@ -3,7 +3,6 @@ package com.davidwang.iridiumsix;
 import java.util.TreeMap;
 
 public class Distance extends Unit{
-// USE A MAP INSTEAD !!
 //    private static final double METRE = 1;
 //    private static final double KILOMETRE = 1000;
 //    private static final double CENTIMETRE = 0.1;
