@@ -14,6 +14,15 @@ public class Distance extends Unit{
 //    private static final double FOOT = 3.2808388799999997;
 //    private static final double INCH = 39.370066559999997935;
 
+
+    /*
+    Questions:
+    should this be a static class?
+    how do we handle which unit we call?
+        maybe it's all one unit class and we store the different types within?
+    [insert doubts that this is the cleanest solution]
+     */
+
     private static final TreeMap<String, Double> myMap;
     static {
         myMap = new TreeMap<>();
