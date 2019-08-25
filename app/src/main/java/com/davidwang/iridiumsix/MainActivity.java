@@ -12,14 +12,14 @@ import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
     private String mTopUnit;
-    private double mTopAmount;
     private String mBottomUnit;
-    private double mBottomAmount;
 
     private Spinner topSpinner;
     private Spinner bottomSpinner;
     private EditText topText;
     private EditText bottomText;
+
+    private Converter converter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         topSpinner.setAdapter(adapter);
         bottomSpinner.setAdapter(adapter);
 
+        // Declare Converter object
+        converter = new Converter();
+
         topSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
                 // An item was selected. You can retrieve the selected item using
@@ -46,9 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 mTopUnit = parent.getItemAtPosition(pos).toString();
             }
 
-            public void onNothingSelected(AdapterView<?> parent) {
-                // Another interface callback
-            }
+            public void onNothingSelected(AdapterView<?> parent) { }
         });
         bottomSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
@@ -57,9 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 mBottomUnit = parent.getItemAtPosition(pos).toString();
             }
 
-            public void onNothingSelected(AdapterView<?> parent) {
-                // Another interface callback
-            }
+            public void onNothingSelected(AdapterView<?> parent) { }
         });
 
         topText.addTextChangedListener(new TextWatcher() {
@@ -71,15 +70,11 @@ public class MainActivity extends AppCompatActivity {
                 // grab new value, save as 'amount'
                 String text = topText.getText().toString();
                 double finalValue = Double.parseDouble(text);
-
-                //call convert() from here
-
+                bottomText.setText(""+converter.convert(mTopUnit, mBottomUnit, finalValue));
             }
 
             @Override
-            public void afterTextChanged(Editable s) {
-
-            }
+            public void afterTextChanged(Editable s) { }
         });
         bottomText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -87,13 +82,14 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // we will use this
+                // grab new value, save as 'amount'
+                String text = bottomText.getText().toString();
+                double finalValue = Double.parseDouble(text);
+                topText.setText(""+converter.convert(mBottomUnit, mTopUnit, finalValue));
             }
 
             @Override
-            public void afterTextChanged(Editable s) {
-
-            }
+            public void afterTextChanged(Editable s) { }
         });
     }
 }

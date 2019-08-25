@@ -2,7 +2,7 @@ package com.davidwang.iridiumsix;
 
 import java.util.TreeMap;
 
-public class Distance extends Unit{
+public class Converter {
 //    private static final double METRE = 1;
 //    private static final double KILOMETRE = 1000;
 //    private static final double CENTIMETRE = 0.1;
@@ -14,16 +14,8 @@ public class Distance extends Unit{
 //    private static final double FOOT = 3.2808388799999997;
 //    private static final double INCH = 39.370066559999997935;
 
-
-    /*
-    Questions:
-    should this be a static class?
-    how do we handle which unit we call?
-        maybe it's all one unit class and we store the different types within?
-    [insert doubts that this is the cleanest solution]
-     */
-
     private static final TreeMap<String, Double> myMap;
+
     static {
         myMap = new TreeMap<>();
         myMap.put("metre", 1.0);
@@ -37,20 +29,10 @@ public class Distance extends Unit{
         myMap.put("inch", 39.370066559999997935);
     }
 
-    public Distance() {
-        super();
-        setType("metre");
-    }
-
-    public Distance(String input) {
-        this();
-        setType(input);
-    }
-
-    public double convert(String inputTo, double amount) {
+    public double convert(String inputFrom, String inputTo, double amount) {
         // divide by 'from' (aka type) to convert into 1.0 unit, then multiply by 'to' unit
         // amount / map[type] * map[to];
 
-        return amount * myMap.get(getType()) / myMap.get(inputTo);
+        return amount * myMap.get(inputFrom) / myMap.get(inputTo);
     }
 }
