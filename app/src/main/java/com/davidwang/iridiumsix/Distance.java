@@ -51,6 +51,6 @@ public class Distance extends Unit{
         // divide by 'from' (aka type) to convert into 1.0 unit, then multiply by 'to' unit
         // amount / map[type] * map[to];
 
-        return amount / myMap.get(getType()) * myMap.get(inputTo);
+        return amount * myMap.get(getType()) / myMap.get(inputTo);
     }
 }
