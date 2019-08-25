@@ -20,5 +20,3 @@ lbs, oz
 L, mL
 gallons, fl. oz, cups, quarts
 tablespoons, teaspoons
-
-By David Wang
