@@ -4,19 +4,19 @@ A simple Android app for converting between units of distance, mass, temperature
 This project is a **work-in-progress** and will be developed incrementally as I learn more and more about Android development.
 More features will be added as I become more experienced.
 
-# Units Planned to be Included:
-## Distance
+## Units Planned to be Included:
+### Distance
 km, m, cm, mm
 mi, yards, ft, in
 
-## Mass
+### Mass
 kg, g, mg
 lbs, oz
 
-## Temperature
+### Temperature
 °C, °F, K
 
-## Volume
+### Volume
 L, mL
 gallons, fl. oz, cups, quarts
 tablespoons, teaspoons
